@@ -1,0 +1,119 @@
+{
+	// Place your starter_sveltekit_v2 workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	// Example:
+	"Print to console": {
+		"scope": "javascript,typescript",
+		"prefix": "log",
+		"body": ["console.log('$1');", "$2"]
+	},
+	"Dispatch event": {
+		"scope": "javascript,typescript",
+		"prefix": "dispatch",
+		"body": [
+			"import { createEventDispatcher } from 'svelte';",
+			"const dispatch = createEventDispatcher();"
+		]
+	},
+	"Shad-cn form": {
+		"scope": "javascript,typescript",
+		"prefix": ["form:client"],
+		"body": [
+			"import { superForm } from 'sveltekit-superforms';",
+			"import { zodClient } from 'sveltekit-superforms/adapters';",
+			"import { ${1:schemaName} } from './schema';",
+			"",
+			"const form = superForm(data.form, {",
+			"    dataType: 'json',",
+			"    validators: zodClient(${1:schemaName})",
+			"});",
+			"",
+			"const { form: formData, submitting, enhance} = form;"
+		]
+	},
+	"Animated loader (ts)": {
+		"scope": "javascript,typescript",
+		"prefix": "icon:load",
+		"body": "import { LoaderCircle } from 'lucide-svelte';"
+	},
+	"Initialize form (backend)": {
+		"scope": "javascript,typescript",
+		"prefix": "form:init",
+		"body": [
+			"import { zod } from 'sveltekit-superforms/adapters';",
+			"import { superValidate, setError, fail } from 'sveltekit-superforms';",
+			"import { fail } from '@sveltejs/kit';",
+			"import { ${1} } from './schema';"
+		]
+	},
+	"Load form (backend)": {
+		"scope": "javascript,typescript",
+		"prefix": "form:load",
+		"body": ["const form = await superValidate(zod(${1}));", "", "${2}"]
+	},
+	"Validate form (backend)": {
+		"scope": "javascript,typescript",
+		"prefix": "form:validate",
+		"body": [
+			"// Validate",
+			"const form = await superValidate(request, zod(${1}))",
+			"",
+			"if (!form.valid) {",
+			"    return fail(400, { form });",
+			"}",
+			"",
+			"// Payload",
+			"const { ${2} } = form.data;",
+			"",
+			"${3}"
+		]
+	},
+	"Animated loader (html)": {
+		"scope": "svelte",
+		"prefix": "button:loader",
+		"body": [
+			"<Button class=\"w-20\" type=\"submit\" disabled={\\$submitting\\}>",
+			"{#if \\$submitting}",
+			"<LoaderCircle class=\"size-4 animate-spin\" />",
+			"{:else}",
+			"${1}",
+			"{/if}",
+			"</Button>"
+		]
+	},
+	"Database select": {
+		"scope": "javascript,typescript",
+		"prefix": "db:select",
+		"body": [
+			"// Select record",
+			"const { data: $1Select, error: $1Error } = await supabase",
+			"    .from('$3')",
+			"    .select($4)",
+			"    .eq('$5', $6)",
+			"",
+			"if ($1Error) {",
+			"    throw new Error()",
+			"}",
+			"\n$7"
+		]
+	},
+	"Database insert": {
+		"scope": "javascript,typescript",
+		"prefix": "db:insert",
+		"body": [
+			"// Insert record",
+			"const { data: $1Insert, error: $1InsertError } = await supabase",
+			"    .from('$3')",
+			"    .insert({$4})",
+			"",
+			"if ($1InsertError) {",
+			"    throw new Error()",
+			"}",
+			"\n$5"
+		]
+	}
+}
