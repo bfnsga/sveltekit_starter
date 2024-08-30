@@ -1,6 +1,6 @@
 # A string used to distinguish different Supabase projects on the same host. Defaults to the
 # working directory name when running `supabase init`.
-project_id = "starter_sveltekit_v2"
+project_id = "sveltekit_starter"
 
 [api]
 enabled = true
@@ -112,7 +112,7 @@ enable_confirmations = false
 max_frequency = "1s"
 
 [auth.email.template.invite]
-subject = "You are invited to AppMVP"
+subject = "You are invited to SvelteKit Starter"
 content_path = "./supabase/templates/invite.html"
 
 # Use a production-ready SMTP server
