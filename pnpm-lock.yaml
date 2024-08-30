@@ -11,18 +11,12 @@ importers:
       '@internationalized/date':
         specifier: ^3.5.5
         version: 3.5.5
-      '@lemonsqueezy/lemonsqueezy.js':
-        specifier: ^3.2.0
-        version: 3.2.0
       '@supabase/ssr':
         specifier: ^0.4.0
         version: 0.4.0(@supabase/supabase-js@2.44.4)
       '@supabase/supabase-js':
         specifier: ^2.44.4
         version: 2.44.4
-      '@unkey/api':
-        specifier: ^0.26.0
-        version: 0.26.0
       bits-ui:
         specifier: ^0.21.12
         version: 0.21.12(svelte@4.2.18)
@@ -361,10 +355,6 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
-  '@lemonsqueezy/lemonsqueezy.js@3.2.0':
-    resolution: {integrity: sha512-6K72T4XEjNTu1WrIFMfvG0FgOkDhexCD+V7IKtajyW2fzZaHeMF57mgrFAVskNOlVMuWvb1wzQ/JZ68cfxm9mw==}
-    engines: {node: '>=20'}
-
   '@mapbox/node-pre-gyp@1.0.11':
     resolution: {integrity: sha512-Yhlar6v9WQgUp/He7BdgzOz8lqMQ8sU+jkCq7Wx8Myc5YFJLbEe7lgui/V7G1qB1DJykHSGwreceSaD60Y0PUQ==}
     hasBin: true
@@ -602,15 +592,6 @@ packages:
 
   '@types/ws@8.5.11':
     resolution: {integrity: sha512-4+q7P5h3SpJxaBft0Dzpbr6lmMaqh0Jr2tbhJZ/luAwvD7ohSCniYkwz/pLxuT2h0EOa6QADgJj1Ko+TzRfZ+w==}
-
-  '@unkey/api@0.26.0':
-    resolution: {integrity: sha512-3NITE5Rul4LzNWTN2L0B9HyaBQBR//dxECqhXr8eQ6XX2CY2LVANvO1m+60pBiQ3a6OJxjh+/eE4UUWoHoXn+A==}
-
-  '@unkey/error@0.2.0':
-    resolution: {integrity: sha512-DFGb4A7SrusZPP0FYuRIF0CO+Gi4etLUAEJ6EKc+TKYmscL0nEJ2Pr38FyX9MvjI4Wx5l35Wc9KsBjMm9Ybh7w==}
-
-  '@unkey/rbac@0.3.1':
-    resolution: {integrity: sha512-Hj+52XRIlBBl3/qOUq9K71Fwy3PWExBQOpOClVYHdrcmbgqNL6L4EdW/BzliLhqPCdwZTPVSJTnZ3Hw4ZYixsQ==}
 
   '@vercel/nft@0.27.3':
     resolution: {integrity: sha512-oySTdDSzUAFDXpsSLk9Q943o+/Yu/+TCFxnehpFQEf/3khi2stMpTHPVNwFdvZq/Z4Ky93lE+MGHpXCRpMkSCA==}
@@ -2424,8 +2405,6 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@lemonsqueezy/lemonsqueezy.js@3.2.0': {}
-
   '@mapbox/node-pre-gyp@1.0.11':
     dependencies:
       detect-libc: 2.0.3
@@ -2694,19 +2673,6 @@ snapshots:
   '@types/ws@8.5.11':
     dependencies:
       '@types/node': 20.14.11
-
-  '@unkey/api@0.26.0':
-    dependencies:
-      '@unkey/rbac': 0.3.1
-
-  '@unkey/error@0.2.0':
-    dependencies:
-      zod: 3.23.8
-
-  '@unkey/rbac@0.3.1':
-    dependencies:
-      '@unkey/error': 0.2.0
-      zod: 3.23.8
 
   '@vercel/nft@0.27.3':
     dependencies:
